@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+ <!-- 开启使用开发模式，详细错误提示 -->  
+    <constant name="struts.devMode" value="false" />  
+    <!-- 把主题配置为simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    <!-- 将对象交给spring管理 -->  
+    <constant name="struts.objectFactory" value="spring" />  
+    <!-- 指定每次配置文件更改后，自动重新加载 -->  
+    <constant name="struts.configuration.xml.reload" value="false" />  
+    <!-- 默认后缀名 -->  
+    <constant name="struts.action.extension" value="action" />  
+     <!-- 文件上传大小限制 -->  
+    <constant name="struts.multipart.maxSize" value="5000000"/>
+    
+    <constant name="struts.objectFactory.spring.autoWire.alwaysRespect" value="true" /> 
+    <!-- Struts Annotation -->  
+    
+    <!-- <include file="struts-default.xml"/> -->
+    <package name="default"  extends="convention-default">
+    	<!-- <interceptors>
+    		声明一个日志拦截器
+    		<interceptor name="logInterceptor" class="com.ahhdjcims.util.LogInterceptor"></interceptor>
+    		声明拦截器
+    		<interceptor name="checkPrivilege" class="com.ahhdjcims.util.CheckPrivilegeInterceptor"></interceptor>
+    		
+    		重新定义默认的拦截器栈
+    		<interceptor-stack name="defaultStack">
+    			<interceptor-ref name="logInterceptor"></interceptor-ref>
+    			<interceptor-ref name="checkPrivilege"></interceptor-ref>
+    			<interceptor-ref name="defaultStack"></interceptor-ref>
+    		</interceptor-stack>
+    	</interceptors> -->
+    	
+    	<!-- <global-results>
+    		<result name="loginUI">/WEB-INF/user/logIn.jsp</result>
+    		<result name="noPrivilege">/noPrivilege.jsp</result>
+    	</global-results> -->
+    </package>
+    
+</struts>  
